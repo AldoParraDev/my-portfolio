@@ -1,0 +1,33 @@
+.header {
+    @apply w-full flex items-center bg-white;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+    &__mobile {
+        @apply w-full flex items-center justify-between px-[2.5rem] py-[1.5rem];
+        &__logo {
+            @apply w-[8rem];
+            img {
+                @apply w-full object-cover;
+            }
+        }
+        &__hamburguer svg {
+            @apply !text-[3.6rem] !text-[#00A0A5];
+        }
+    }
+    &__dropshow {
+        @apply w-[80%] bg-white h-auto absolute top-0 z-[10000];
+        transform: translateX(-100%);
+        transition: transform 350ms ease-in-out;
+        &.open {
+            transform: translateX(0px);
+            transition: transform 350ms ease-in-out;
+        }
+    }
+    &__overlay {
+        @apply w-screen h-screen absolute inset-0 bg-black/[.5] pointer-events-none opacity-0;
+        transition: opacity 350ms ease-in-out;
+        &.open {
+            @apply pointer-events-auto opacity-100;
+            transition: opacity 350ms ease-in-out;
+        }
+    }
+}

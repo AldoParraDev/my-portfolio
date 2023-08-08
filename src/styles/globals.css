@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './ui/index.css';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+    @apply text-[1.5rem];
+}
+
+input,
+select,
+textarea {
+   @apply w-full border-none bg-none;
+
+   &:focus {
+      @apply outline-none;
+   }
+}
+
+textarea {
+   resize: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+input[type="number"] {
+   -moz-appearance: textfield;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+   -webkit-appearance: button;
+   background-color: transparent;
+   background-image: none;
+}
+
+select {
+   -webkit-appearance: none;
+}
